@@ -46,7 +46,10 @@ istiod-86457659bb-5h58w                1/1     Running   0          16s
 
 
 ## 제외-- 3. Dex
+kustomize build common/dex/overlays/istio | kubectl apply -f -
 
+### 삭제 
+kustomize build common/dex/overlays/istio | kubectl delete -f -
 ## keycloak
 
 
