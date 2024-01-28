@@ -282,3 +282,20 @@ kustomize build common/user-namespace/base | kubectl apply -f -
 
 ### 삭제
 kustomize build common/user-namespace/base | kubectl delete -f -
+
+
+
+## airflow
+pip install apache-airflow==2.6.3
+pip install pendulum=2.1.2
+pip install flask-session=0.5.0
+pip install connexion==2.14.2
+
+
+airflow db init
+
+
+airflow users create --username admin --firstname admin --lastname admin -p admin --role Admin --email admin@admin.com
+
+airflow webserver --port 8080
+airflow scheduler
