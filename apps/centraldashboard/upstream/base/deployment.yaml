@@ -19,7 +19,7 @@ spec:
       containers:
       - name: centraldashboard
         image: docker.io/kubeflownotebookswg/centraldashboard
-        imagePullPolicy: IfNotPresent
+        imagePullPolicy: Always
         livenessProbe:
           httpGet:
             path: /healthz
